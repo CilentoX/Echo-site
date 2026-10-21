@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    image: eco-site:latest
+    container_name: eco-site-web
+    restart: unless-stopped
+    networks:
+      - coolify
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=coolify
+      - traefik.http.routers.eco-site.rule=Host(`ecoapp.litteris.online`)
+      - traefik.http.routers.eco-site.entrypoints=http
+      - traefik.http.services.eco-site.loadbalancer.server.port=80
+
+networks:
+  coolify:
+    external: true

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eco — app de mensageria para comunidades. Guildas, canais, threads e reações, rodando no seu próprio servidor.">
+  <meta property="og:title" content="Eco — mensageria para comunidades">
+  <meta property="og:description" content="Guildas, canais, threads e reações do jeito que você conhece — no seu próprio servidor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ecoapp.litteris.online">
+  <title>Eco — mensageria para comunidades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='9' cy='16' r='4' fill='%2314B8A6'/%3E%3Cpath d='M15 9a10 10 0 0 1 0 14' stroke='%2314B8A6' stroke-width='3' fill='none' stroke-linecap='round' opacity='.66'/%3E%3Cpath d='M21 5a15 15 0 0 1 0 22' stroke='%2314B8A6' stroke-width='3' fill='none' stroke-linecap='round' opacity='.33'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Eco — início">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="16" r="4" fill="var(--acc)"/>
+          <path d="M15 9a10 10 0 0 1 0 14" stroke="var(--acc)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".66"/>
+          <path d="M21 5a15 15 0 0 1 0 22" stroke="var(--acc)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".33"/>
+        </svg>
+        <span>Eco</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#recursos">Recursos</a>
+        <a href="#previa">Prévia</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#download">Baixar</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>Em desenvolvimento — primeira versão em breve</p>
+          <h1>Sua comunidade merece um lugar próprio.</h1>
+          <p class="lead">O Eco é um app de mensageria para comunidades: guildas, canais, threads e reações do jeito que você já conhece — rodando no seu próprio servidor, com login pelo Google.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#download">Baixar para Windows</a>
+            <a class="btn btn-ghost" href="#recursos">Ver recursos</a>
+          </div>
+          <ul class="hero-meta">
+            <li>Gratuito</li>
+            <li>Self-hosted</li>
+            <li>Sem anúncios</li>
+          </ul>
+        </div>
+        <div class="hero-mock" role="img" aria-label="Prévia da interface do Eco: colunas de comunidades, canais, conversa e membros">
+          <div class="mock-rail" aria-hidden="true">
+            <div class="rail-pill active" title="Eco HQ"></div>
+            <div class="rail-pill"></div>
+            <div class="rail-pill"></div>
+          </div>
+          <div class="mock-side" aria-hidden="true">
+            <div class="side-head">Eco HQ</div>
+            <div class="side-cat">Geral</div>
+            <div class="side-chan active"># bem-vindos</div>
+            <div class="side-chan"># geral</div>
+            <div class="side-cat">Voz</div>
+            <div class="side-chan side-voice">
+              <span class="voice-wave" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="M3 6v4M6 4v8M9 5v6M12 3v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              Lounge
+            </div>
+          </div>
+          <div class="mock-chat" aria-hidden="true">
+            <div class="chat-head"># bem-vindos</div>
+            <div class="msg">
+              <span class="avatar" style="--av:#2DD4BF">L</span>
+              <div class="msg-body">
+                <p class="msg-who">Lucas <time>14:02</time></p>
+                <p class="msg-text">Boas-vindas ao Eco! Aqui a gente organiza tudo em canais.</p>
+              </div>
+            </div>
+            <div class="msg">
+              <span class="avatar" style="--av:#F472B6">M</span>
+              <div class="msg-body">
+                <p class="msg-who">Marina <time>14:03</time></p>
+                <p class="msg-text">Ficou ótimo — e as threads vão salvar o #geral.</p>
+                <span class="reaction">🧵 3</span>
+              </div>
+            </div>
+            <div class="msg msg-bot">
+              <span class="avatar avatar-bot" style="--av:#14B8A6">E</span>
+              <div class="msg-body">
+                <p class="msg-who"><span class="tag-bot">BOT</span> Eco <time>14:04</time></p>
+                <p class="msg-text">Dica: convide sua comunidade pelo painel de convites.</p>
+              </div>
+            </div>
+            <div class="chat-input" aria-hidden="true"></div>
+          </div>
+          <div class="mock-members" aria-hidden="true">
+            <div class="mem-head">Online — 3</div>
+            <div class="mem"><span class="avatar avatar-xs" style="--av:#2DD4BF">L</span> Lucas</div>
+            <div class="mem"><span class="avatar avatar-xs" style="--av:#F472B6">M</span> Marina</div>
+            <div class="mem"><span class="avatar avatar-xs avatar-bot" style="--av:#14B8A6">E</span> Eco <span class="tag-bot">BOT</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recursos">
+      <div class="container">
+        <h2>Feito para comunidades</h2>
+        <p class="section-lead">Tudo o que uma comunidade ativa precisa — e nada do que ela não pediu.</p>
+        <div class="feature-grid">
+          <article class="card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 8h20M6 16h20M6 24h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <h3>Comunidades e canais</h3>
+            <p>Organize suas guildas com categorias e canais de texto — a estrutura que suas pessoas já conhecem.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 8h13a5 5 0 0 1 5 5v6a5 5 0 0 1-5 5h-3l-6 5v-5H7a5 5 0 0 1-5-5v-6a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/><path d="M26 14h2a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4h-2" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>
+            <h3>Threads e reações</h3>
+            <p>Converse em paralelo sem poluir o canal. Reações rápidas para concordar, comemorar e reagir.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="2.4" fill="none"/><circle cx="27" cy="6" r="4" fill="currentColor"/></svg>
+            <h3>Presença em tempo real</h3>
+            <p>Veja quem está online, quem está ausente e quem está digitando — sem achismo.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="3" stroke="currentColor" stroke-width="2.4" fill="none"/><circle cx="11" cy="14" r="2.6" fill="currentColor"/><path d="m6 23 7-6 5 4 4-3 4 4" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
+            <h3>Mídia com preview</h3>
+            <p>Imagens e vídeos aparecem direto na conversa, com thumbnail e visualização sem sair do canal.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a12 12 0 0 1 12 12v5a5 5 0 0 1-5 5h-2v-8h7M4 16v-2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M4 16a12 12 0 0 0 4 9v3h3v-4H8" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Login com Google</h3>
+            <p>Entre com a conta que você já usa. Escolha seu nome de usuário uma vez — e pronto.</p>
+          </article>
+          <article class="card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="8" cy="16" r="2.5" fill="currentColor"/><path d="M13 10a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".6"/><path d="M18 6a13 13 0 0 1 0 20" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".3"/><path d="M24 4v24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 5"/></svg>
+            <h3>Voz e vídeo <span class="soon">em breve</span></h3>
+            <p>Salas de voz nativas direto no app — converse sem sair da comunidade. Está no roadmap.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="previa">
+      <div class="container">
+        <h2>Parece com o que você conhece</h2>
+        <p class="section-lead">Interface escura, densa em informação e rápida — prévia da interface em construção.</p>
+        <div class="shot-grid">
+          <figure class="shot">
+            <figcaption>Conversas com reações, threads e bots</figcaption>
+          </figure>
+          <figure class="shot shot-2">
+            <figcaption>Canais, presença e salas de voz</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section privacy">
+      <div class="container privacy-inner">
+        <svg class="privacy-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 8v7c0 7 4.7 12 11 14 6.3-2 11-7 11-14V8L16 3Z" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/><path d="m11 16 4 4 6-7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h2>Self-hosted por princípio</h2>
+          <p>Seu servidor, seu banco de dados, suas regras. Sem anúncios, sem rastreadores, sem venda de dados — o Eco roda na sua infraestrutura, e a conversa da sua comunidade fica com a sua comunidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="download">
+      <div class="container download-inner">
+        <h2>Baixar o Eco</h2>
+        <p class="section-lead">Windows primeiro. macOS e Linux no roadmap.</p>
+        <div class="dl-cards">
+          <article class="dl-card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 6l12-2v14H4V6Zm14-2.3L28 2v16H18V3.7ZM4 20h12v8l-12-2v-6Zm14 0h10v10l-10-2V20Z" fill="currentColor" opacity=".92"/></svg>
+            <h3>Windows</h3>
+            <p>Instalador padrão, com atualização automática silenciosa: o Eco se atualiza sozinho e aplica na próxima reinicializada do app.</p>
+            <a class="btn btn-primary" href="https://github.com/CilentoX/eco-site/releases" >Baixar — em breve</a>
+            <p class="dl-note">O instalador sai junto com a primeira versão. Acompanhe pelo GitHub.</p>
+          </article>
+          <article class="dl-card">
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M16 9v7l5 3" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+            <h3>Atualizações automáticas</h3>
+            <p>Nada de procurar link de download toda vez: instalou uma vez, o Eco mantém-se atualizado sozinho.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container faq-inner">
+        <h2>Perguntas frequentes</h2>
+        <details open>
+          <summary>O Eco é gratuito?</summary>
+          <p>Sim. O app é gratuito e o servidor roda na infraestrutura que você escolher — sem mensalidade, sem plano Pro.</p>
+        </details>
+        <details>
+          <summary>Preciso de servidor próprio?</summary>
+          <p>Para <strong>criar</strong> uma comunidade, sim — o Eco é self-hosted: uma VPS com Docker é suficiente. Para <strong>entrar</strong> numa comunidade, basta receber um convite e entrar com sua conta Google.</p>
+        </details>
+        <details>
+          <summary>Como convido pessoas para minha comunidade?</summary>
+          <p>Por convites gerados pelo próprio Eco. Quem entra escolhe o nome de usuário uma única vez — o resto é história.</p>
+        </details>
+        <details>
+          <summary>Tem aplicativo para celular?</summary>
+          <p>Ainda não. O foco atual é o desktop para Windows; macOS e Linux são os próximos da fila.</p>
+        </details>
+        <details>
+          <summary>Tem chamadas de voz?</summary>
+          <p>Está no roadmap — salas de voz nativas no app. A primeira versão foca no essencial de texto: canais, threads, reações e presença.</p>
+        </details>
+        <details>
+          <summary>Onde ficam os meus dados?</summary>
+          <p>No seu servidor. Mensagens e mídia ficam na sua infraestrutura — a única dependência externa é o login com Google.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="16" r="4" fill="var(--acc)"/>
+          <path d="M15 9a10 10 0 0 1 0 14" stroke="var(--acc)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".66"/>
+          <path d="M21 5a15 15 0 0 1 0 22" stroke="var(--acc)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".33"/>
+        </svg>
+        <div>
+          <p class="footer-name">Eco</p>
+          <p class="footer-tag">Mensageria para comunidades — self-hosted.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="#recursos">Recursos</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/CilentoX/eco-site" rel="noopener">GitHub</a>
+      </nav>
+      <p class="footer-copy">© 2026 Litteris · ecoapp.litteris.online</p>
+    </div>
+  </footer>
+</body>
+</html>
