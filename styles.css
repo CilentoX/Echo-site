@@ -162,22 +162,49 @@ a:hover { text-decoration: underline; }
 /* ---------- Prévia (shots) ---------- */
 .shot-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; margin-top: 44px; }
 .shot {
-  min-height: 220px; border: 1px solid var(--bd); border-radius: 14px;
+  border: 1px solid var(--bd); border-radius: 14px;
+  background: var(--rail);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.shot-body { flex: 1; padding: 0 16px 16px; background: var(--bg); }
+.shot-body .chat-head { margin: 0 -16px 8px; padding: 10px 16px; border-bottom: 1px solid var(--bd); }
+.shot-body .msg { padding: 10px 0; }
+.shot-body-side { background: var(--surf); font-size: 0.8rem; padding: 16px; }
+.shot-body-side .side-head { padding: 2px 0 10px; }
+.media-thumb {
+  display: block; margin-top: 8px; width: 100%; max-width: 320px; height: 92px;
+  border-radius: 10px; border: 1px solid var(--bd);
   background:
-    linear-gradient(180deg, var(--surf) 0%, var(--bg) 100%);
-  display: flex; align-items: flex-end;
-  position: relative; overflow: hidden;
+    radial-gradient(circle at 78% 30%, color-mix(in srgb, var(--acc) 40%, transparent) 0%, transparent 55%),
+    linear-gradient(135deg, var(--surf2), var(--surf));
+  position: relative;
 }
-.shot::before {
-  content: ""; position: absolute; inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--acc) 14%, transparent) 0%, transparent 45%),
-    repeating-linear-gradient(90deg, transparent 0 46px, color-mix(in srgb, var(--bd) 55%, transparent) 46px 47px),
-    repeating-linear-gradient(0deg, transparent 0 38px, color-mix(in srgb, var(--bd) 55%, transparent) 38px 39px);
+.media-thumb::after {
+  content: ""; position: absolute; inset: 0; margin: auto; width: 34px; height: 34px; border-radius: 50%;
+  border: 2px solid rgba(233, 237, 242, .85); border-left-color: transparent; border-bottom-color: transparent;
+  transform: rotate(45deg);
 }
+.reaction-row { display: flex; gap: 6px; margin-top: 6px; }
+.thread-chip {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
+  font-size: 0.68rem; color: var(--acc);
+  background: color-mix(in srgb, var(--acc) 10%, var(--surf));
+  border: 1px solid var(--bd); border-radius: 999px; padding: 3px 10px;
+}
+.voice-avatars { display: flex; align-items: center; margin: 6px 0 2px; }
+.voice-avatars .avatar { margin-right: -6px; border: 2px solid var(--surf); }
+.voice-more { font-size: 0.62rem; color: var(--mut); margin-left: 10px; }
+.shot-presence { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.pres { display: flex; align-items: center; gap: 8px; color: var(--txt); font-size: 0.78rem; }
+.pres::before { content: ""; width: 8px; height: 8px; border-radius: 50%; }
+.pres-online::before { background: var(--online); }
+.pres-idle::before { background: #FBBF24; }
+.pres-off { color: var(--mut); }
+.pres-off::before { background: var(--bd); }
 .shot figcaption {
-  position: relative; width: 100%; padding: 12px 16px; font-size: 0.85rem; color: var(--mut);
-  background: color-mix(in srgb, var(--bg) 82%, transparent); border-top: 1px solid var(--bd);
+  width: 100%; padding: 12px 16px; font-size: 0.85rem; color: var(--mut);
+  background: var(--rail);
 }
 
 /* ---------- Privacidade ---------- */
