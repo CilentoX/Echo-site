@@ -1,7 +1,11 @@
 {
-  "version": "0.1.5",
-  "notes": "Echo 0.1.5 — instalador Windows com identidade visual Echo (paleta #14B8A6 / #0F1114), idioma inglês e assinatura minisign.",
-  "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDYxNEZGQ0NFRThBNTA2RDMKUldUVEJxWG96dnhQWVFkKzU2MDBaakZuTW9ONTR0ZEwwNWVwUHh5VzZ5Zk01YTJoNGtBT0hxaEcK",
-  "signature": "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZVVkVKeFdHOTZkbmhRV1ZFNU5EZDVTMkYzTW5abFkxSXZNV3BuZERFck5WSmhiR1pZWVc1alRIZ3pWRTB6V2poalJFWmFZbkpuT1dscU1YZFBWWEZtUml0MVVUTkdjVzlDU0RGbVNWVkpLeTlEVG1ZMWVTdDJhbVpYUjNwUE5uZE5QUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpreU56QXpNekkwQ1dacGJHVTZSV052WHpBdU1TNDBYM2cyTkMxelpYUjFjQzVsZUdVSmRtVnljMmx2Ympvd0xqRXVOQW93V1hWREwwVjZkVmdyWjFCWlVqSTFValJ5WW5oNlRVZHJNbmhDWVVZeVVXdFRSemhtWVRSNVJqSTRWVGc0Ukd0VWMzTjRaa2hOZVZGT2VWSllhVmh0UlhseEszQnJiSEF2VWpWTGNYaHpkSFZ5SzBoRFVUMDlDZz09",
-  "url": "https://github.com/CilentoX/eco/releases/download/v0.1.5/Echo_0.1.5_x64-setup.exe"
+  "version": "0.1.6",
+  "notes": "Echo v0.1.6: nova identidade visual (logo oficial), hook de migracao que remove o Eco antigo, instalador em ingles, animacoes de UI.",
+  "pub_date": "2026-10-22T23:06:28.904Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZVVkVKeFdHOTZkbmhRV1ZnNFJFUnVjR3BzUkhRd1duZE9WMnh4TUhrNU5rbG5hWFV2UlVaNlZXTnpaR0pFTkZWbVJGWnhRbXRvUnpoVGIyMXBXV05EWkc1TVNrdGFPVGN4ZDNZclVrdFRkMnROWjBkSE9FNHlaMFZFVldkbFRHZEZQUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpreU56RXdNRFk1Q1dacGJHVTZSV05vYjE4d0xqRXVObDk0TmpRdGMyVjBkWEF1WlhobENYWmxjbk5wYjI0Nk1DNHhMallLVUV3eGF6QnhUbWx5V25saVYzZENlazFPU1hKTWN6bFFMMDQ1VUVJME1EZGFWM1F3ZW5WbmVqTXlSbFF5VFc1RVdHZGpNVmRvUlVaSFR6VkZhMUJ3TWsxUGMyWnZXRGw0TjFSMU16bHpaRUZKWWt0M1FVRTlQUW89",
+      "url": "https://github.com/CilentoX/Echo/releases/download/v0.1.6/Echo_0.1.6_x64-setup.exe"
+    }
+  }
 }
