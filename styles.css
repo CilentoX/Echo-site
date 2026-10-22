@@ -1,12 +1,12 @@
-/* Eco — landing. Identidade: paleta B, Space Grotesk (display) + Inter (UI). */
+/* Echo — landing. Identidade: paleta Echo, Space Grotesk (display) + Inter (UI). */
 :root {
-  --bg: #0D1017;
-  --rail: #12151C;
+  --bg: #0F1114;
+  --rail: #111827;
   --surf: #171B24;
-  --surf2: #1D222D;
+  --surf2: #111827;
   --bd: #2A3546;
-  --txt: #E9EDF2;
-  --mut: #97A2B0;
+  --txt: #FFFFFF;
+  --mut: #14B8A6;
   --acc: #14B8A6;
   --acc-press: #0D9488;
   --online: #34D399;

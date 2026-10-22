@@ -1,7 +1,7 @@
 {
-  "version": "0.1.4",
-  "notes": "Eco 0.1.4 — instalador Windows com identidade visual Eco, idioma português do Brasil e assinatura minisign.",
+  "version": "0.1.5",
+  "notes": "Echo 0.1.5 — instalador Windows com identidade visual Echo (paleta #14B8A6 / #0F1114), idioma inglês e assinatura minisign.",
   "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDYxNEZGQ0NFRThBNTA2RDMKUldUVEJxWG96dnhQWVFkKzU2MDBaakZuTW9ONTR0ZEwwNWVwUHh5VzZ5Zk01YTJoNGtBT0hxaEcK",
   "signature": "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZVVkVKeFdHOTZkbmhRV1ZFNU5EZDVTMkYzTW5abFkxSXZNV3BuZERFck5WSmhiR1pZWVc1alRIZ3pWRTB6V2poalJFWmFZbkpuT1dscU1YZFBWWEZtUml0MVVUTkdjVzlDU0RGbVNWVkpLeTlEVG1ZMWVTdDJhbVpYUjNwUE5uZE5QUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpreU56QXpNekkwQ1dacGJHVTZSV052WHpBdU1TNDBYM2cyTkMxelpYUjFjQzVsZUdVSmRtVnljMmx2Ympvd0xqRXVOQW93V1hWREwwVjZkVmdyWjFCWlVqSTFValJ5WW5oNlRVZHJNbmhDWVVZeVVXdFRSemhtWVRSNVJqSTRWVGc0Ukd0VWMzTjRaa2hOZVZGT2VWSllhVmh0UlhseEszQnJiSEF2VWpWTGNYaHpkSFZ5SzBoRFVUMDlDZz09",
-  "url": "https://github.com/CilentoX/eco/releases/download/v0.1.4/Eco_0.1.4_x64-setup.exe"
+  "url": "https://github.com/CilentoX/eco/releases/download/v0.1.5/Echo_0.1.5_x64-setup.exe"
 }
