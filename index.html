@@ -225,8 +225,8 @@
             <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 6l12-2v14H4V6Zm14-2.3L28 2v16H18V3.7ZM4 20h12v8l-12-2v-6Zm14 0h10v10l-10-2V20Z" fill="currentColor" opacity=".92"/></svg>
             <h3>Windows</h3>
             <p>Instalador padrão, com atualização automática silenciosa: o Eco se atualiza sozinho e aplica na próxima reinicializada do app.</p>
-            <a class="btn btn-primary" href="downloads/Eco_0.1.2_x64-setup.exe" download>Baixar para Windows</a>
-            <p class="dl-note">v0.1.2 — instalador .exe direto, sem cadastro. Código-fonte no <a href="https://github.com/CilentoX/eco" rel="noopener">GitHub</a>.</p>
+            <a class="btn btn-primary" id="dl-windows" href="https://github.com/CilentoX/eco/releases/latest" download>Baixar para Windows</a>
+            <p class="dl-note">Última versão direto do GitHub Releases, sem cadastro. Código-fonte no <a href="https://github.com/CilentoX/eco" rel="noopener">GitHub</a>.</p>
           </article>
           <article class="dl-card">
             <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M16 9v7l5 3" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
@@ -290,5 +290,25 @@
       <p class="footer-copy">© 2026 Litteris · ecoapp.litteris.online</p>
     </div>
   </footer>
+
+  <script>
+    // Resolve o instalador da última release automaticamente via GitHub API
+    (function(){
+      var btn = document.getElementById('dl-windows');
+      if (!btn) return;
+      fetch('https://api.github.com/repos/CilentoX/eco/releases/latest')
+        .then(function(r){ return r.json(); })
+        .then(function(release){
+          var asset = release.assets && release.assets.find(function(a){ return a.name.endsWith('_x64-setup.exe'); });
+          if (asset && asset.browser_download_url) {
+            btn.href = asset.browser_download_url;
+            btn.download = asset.name;
+          }
+        })
+        .catch(function(){
+          // fallback: mantém o link para a página de releases
+        });
+    })();
+  </script>
 </body>
 </html>
