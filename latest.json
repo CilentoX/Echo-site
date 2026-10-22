@@ -1,11 +1,11 @@
 {
-  "version": "0.1.0",
-  "notes": "Primeira versão do Eco. Login Google SSO, guildas, canais e chat em tempo real, sessão persistida, auto-updater silencioso.",
-  "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEIyNDQ3NEE0RkE3Mzc4QUIKUldTcmVIUDZwSFJFc25jYWp3RVdxTFpZVkVjR0c2NktkQ2F5YXVwU095SjNUMEhtYis3WDFIa3QK",
+  "version": "0.1.2",
+  "notes": "Eco v0.1.2 — login Google SSO, criação de guildas, canais e chat em tempo real, sessão persistida no keyring, ícones do Eco, banner de atualização com botão Reiniciar agora e atualização automática silenciosa.",
+  "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDYxNEZGQ0NFRThBNTA2RDMKUldUVEJxWG96dnhQWVFkKzU2MDBaakZuTW9ONTR0ZEwwNWVwUHh5VzZ5Zk01YTJoNGtBT0hxaEcK",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTcmVIUDZwSFJFc3NyY0t3WFlkQWdoaEpNc2ZrdVhKVnRZelZCUm84ZXErRm1ZZUpPa3g3cGczMW42V29oME04Z3htbXlzanFaWDgvcUovSkdrOUJVNnk3dTV1WVpla2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNjM2ODc0CWZpbGU6RWNvXzAuMS4wX3g2NC1zZXR1cC5leGUKZEVOdjhpNjFLYmwvRnpoalBPNjQwbDl0Yk80NVFiRjJCK0FLV0kxWURKandhb2FORk1BbG1qY0x0d1Y1WTZNbkphZmIwUWdMWFZ5NXlFcnl3L09yQ1E9PQo=",
-      "url": "https://github.com/CilentoX/eco/releases/download/v0.1.0/Eco_0.1.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVEJxWG96dnhQWWVoMXlPUnoyTnBnaWRqNUN3aDRHWm41MW82MTNvaDBQZlhGbzl3NjFjdDlvdlJHRnRhbHNiWlhoa3lGRk00a25rMnNLYWU0UUlKUW9KZW1MZUJuOUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNjgzOTk1CWZpbGU6RWNvXzAuMS4yX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjEuMgpzVVYrL1pPdk1YMHBjcHNadmxndFNYZVhRVUJzSi9VVUMxbGxEMllrZUhQMThXb1J2d2I4VklvSXA4Zy81U2NLZTRSZElnTzFwbFB2c0I5cXRwM3BBZz09Cg==",
+      "url": "https://ecoapp.litteris.online/downloads/Eco_0.1.2_x64-setup.exe"
     }
   }
 }
