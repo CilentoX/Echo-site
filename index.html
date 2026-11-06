@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Echo — app de mensageria para comunidades. Guildas, canais, threads e reações, rodando no seu próprio servidor.">
-  <meta property="og:title" content="Echo — mensageria para comunidades">
-  <meta property="og:description" content="Guildas, canais, threads e reações do jeito que você conhece — no seu próprio servidor.">
+  <meta name="description" content="Echo — Mensageria moderna e salas de voz para comunidades. Detecção de voz VAD, transmissão de tela a 60 FPS, canais, threads e protocolo descentralizado Matrix.">
+  <meta property="og:title" content="Echo — Mensageria, Voz e Comunidades">
+  <meta property="og:description" content="Guildas, canais, salas de voz com VAD Discord-grade e transmissão a 60 FPS — no seu servidor, com login Google.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://echoapp.litteris.online">
-  <title>Echo — mensageria para comunidades</title>
+  <title>Echo — O app de comunidades com voz, vídeo e soberania</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon-32.png">
 </head>
@@ -28,237 +28,438 @@
         <a href="#download">Download</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="#download">Baixar</a>
+      <a class="btn btn-primary btn-sm" href="#download">Baixar Echo</a>
     </div>
   </header>
 
   <main id="top">
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>v0.1.14 disponível para Windows</p>
+          <p class="badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Nova versão <span class="badge-version">v0.1.14</span> pronta para Windows
+          </p>
           <h1>Sua comunidade merece um lugar próprio.</h1>
-          <p class="lead">O Echo é um app de mensageria para comunidades: guildas, canais, threads e reações do jeito que você já conhece — rodando no seu próprio servidor, com login pelo Google.</p>
+          <p class="lead">
+            O Echo combina a ergonomia consagrada de guildas e canais com salas de voz de ultrabaixa latência (VAD adaptativo estilo Discord), transmissão de tela nativa a 60 FPS e protocolo descentralizado — tudo sob o controle da sua comunidade.
+          </p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#download">Baixar para Windows</a>
-            <a class="btn btn-ghost" href="#recursos">Ver recursos</a>
+            <a class="btn btn-ghost" href="#recursos">Explorar recursos</a>
           </div>
           <ul class="hero-meta">
-            <li>Gratuito</li>
-            <li>Self-hosted</li>
-            <li>Sem anúncios</li>
+            <li>100% Gratuito</li>
+            <li>Self-hosted & Matrix</li>
+            <li>Salas de Voz & 60 FPS</li>
+            <li>Sem Anúncios</li>
           </ul>
         </div>
-        <div class="hero-mock" role="img" aria-label="Prévia da interface do Echo: colunas de comunidades, canais, conversa e membros">
+
+        <!-- Interactive Hero Mockup -->
+        <div class="hero-mock" role="img" aria-label="Prévia da interface do Echo com 4 colunas: rail, canais com voz e dock de usuário, chat ao vivo e lista de membros">
+          <!-- Coluna 1: Rail -->
           <div class="mock-rail" aria-hidden="true">
-            <div class="rail-pill active" title="Echo HQ"></div>
-            <div class="rail-pill"></div>
-            <div class="rail-pill"></div>
+            <div class="rail-btn" title="Início">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="rail-sep"></div>
+            <div class="rail-btn active" title="Echo HQ">
+              <span style="font-weight: 700; font-size: 0.85rem;">E</span>
+            </div>
+            <div class="rail-btn" title="Dev Community">
+              <span style="font-weight: 700; font-size: 0.85rem; color: #818CF8;">D</span>
+            </div>
+            <div class="rail-btn rail-add" title="Criar guilda">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
           </div>
+
+          <!-- Coluna 2: Canais + Dock -->
           <div class="mock-side" aria-hidden="true">
-            <div class="side-head">Echo HQ</div>
-            <div class="side-cat">Geral</div>
-            <div class="side-chan active"># bem-vindos</div>
-            <div class="side-chan"># geral</div>
-            <div class="side-cat">Voz</div>
-            <div class="side-chan side-voice">
-              <span class="voice-wave" aria-hidden="true">
-                <svg viewBox="0 0 16 16"><path d="M3 6v4M6 4v8M9 5v6M12 3v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-              </span>
-              Lounge
+            <div class="mock-side-scroll">
+              <div class="side-head">
+                <span>Echo HQ</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="side-cat">Texto</div>
+              <div class="side-chan"># boas-vindas</div>
+              <div class="side-chan active"># geral</div>
+              <div class="side-chan"># anúncios</div>
+
+              <div class="side-cat">Voz & Transmissão</div>
+              <div class="side-chan side-voice">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                <span>Lounge Geral</span>
+              </div>
+              <!-- Membros na Sala de Voz -->
+              <div class="side-voice-part">
+                <span class="avatar avatar-xs avatar-speaking" style="--av:#0FB9A8">L</span>
+                <span>Lucas</span>
+                <div class="voice-bars"><span></span><span></span><span></span></div>
+              </div>
+              <div class="side-voice-part">
+                <span class="avatar avatar-xs" style="--av:#EC4899">M</span>
+                <span>Marina</span>
+                <span class="badge-live" style="margin-left:auto;">AO VIVO</span>
+              </div>
+            </div>
+
+            <!-- Dock Persistente Inferior (UserBar com mic/fone em verde) -->
+            <div class="mock-dock">
+              <div class="dock-user">
+                <span class="avatar avatar-xs" style="--av:#0FB9A8">L</span>
+                <div class="dock-info">
+                  <div class="dock-name">Lucas</div>
+                  <div class="dock-tag">Online</div>
+                </div>
+              </div>
+              <div class="dock-actions">
+                <!-- Mic ativo em verde -->
+                <div class="dock-btn active" title="Microfone ativo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                </div>
+                <!-- Fone ativo em verde -->
+                <div class="dock-btn active" title="Áudio ativo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Coluna 3: Chat Pane -->
           <div class="mock-chat" aria-hidden="true">
-            <div class="chat-head"># bem-vindos</div>
-            <div class="msg">
-              <span class="avatar" style="--av:#2DD4BF">L</span>
-              <div class="msg-body">
-                <p class="msg-who">Lucas <time>14:02</time></p>
-                <p class="msg-text">Boas-vindas ao Echo! Aqui a gente organiza tudo em canais.</p>
+            <div class="chat-head">
+              <span style="color: var(--mut-dark); font-weight: 700;">#</span>
+              <span>geral</span>
+              <span class="chat-head-desc">— canal principal da comunidade</span>
+            </div>
+            <div class="mock-chat-scroll">
+              <div class="msg">
+                <span class="avatar" style="--av:#0FB9A8">L</span>
+                <div class="msg-body">
+                  <p class="msg-who">Lucas <time>19:42</time></p>
+                  <p class="msg-text">A transmissão de tela a 60 FPS com áudio do sistema ficou muito suave!</p>
+                </div>
+              </div>
+              <div class="msg">
+                <span class="avatar" style="--av:#EC4899">M</span>
+                <div class="msg-body">
+                  <p class="msg-who">Marina <time>19:43</time></p>
+                  <p class="msg-text">Vou puxar a live do gameplay no canal de voz pra galera assistir.</p>
+                  <div class="mock-stream-card">
+                    <div class="stream-thumb">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="stream-info">
+                      <div class="stream-title">Transmissão de Marina</div>
+                      <span class="badge-live">AO VIVO · 60 FPS</span>
+                    </div>
+                  </div>
+                  <div style="display:flex; gap:6px; margin-top:4px;">
+                    <span class="reaction">🔥 8</span>
+                    <span class="reaction">🚀 5</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg">
+                <span class="avatar avatar-bot" style="--av:#0FB9A8">E</span>
+                <div class="msg-body">
+                  <p class="msg-who"><span class="tag-bot">BOT</span> Echo <time>19:44</time></p>
+                  <p class="msg-text">Servidor conectado via protocolo descentralizado Matrix com criptografia ativa.</p>
+                </div>
               </div>
             </div>
-            <div class="msg">
-              <span class="avatar" style="--av:#F472B6">M</span>
-              <div class="msg-body">
-                <p class="msg-who">Marina <time>14:03</time></p>
-                <p class="msg-text">Ficou ótimo — e as threads vão salvar o #geral.</p>
-                <span class="reaction">🧵 3</span>
-              </div>
+            <div class="chat-input">
+              <span>Conversar em #geral...</span>
             </div>
-            <div class="msg msg-bot">
-              <span class="avatar avatar-bot" style="--av:#14B8A6">E</span>
-              <div class="msg-body">
-                <p class="msg-who"><span class="tag-bot">BOT</span> Echo <time>14:04</time></p>
-                <p class="msg-text">Dica: convide sua comunidade pelo painel de convites.</p>
-              </div>
-            </div>
-            <div class="chat-input" aria-hidden="true"></div>
           </div>
+
+          <!-- Coluna 4: MemberList -->
           <div class="mock-members" aria-hidden="true">
-            <div class="mem-head">Online — 3</div>
-            <div class="mem"><span class="avatar avatar-xs" style="--av:#2DD4BF">L</span> Lucas</div>
-            <div class="mem"><span class="avatar avatar-xs" style="--av:#F472B6">M</span> Marina</div>
-            <div class="mem"><span class="avatar avatar-xs avatar-bot" style="--av:#14B8A6">E</span> Echo <span class="tag-bot">BOT</span></div>
+            <div class="mem-head">Fundador — 1</div>
+            <div class="mem mem-role-lead">
+              <span class="avatar avatar-xs avatar-speaking" style="--av:#0FB9A8">L</span>
+              <span>Lucas</span>
+            </div>
+            <div class="mem-head">Moderadores — 1</div>
+            <div class="mem mem-role-mod">
+              <span class="avatar avatar-xs" style="--av:#EC4899">M</span>
+              <span>Marina</span>
+            </div>
+            <div class="mem-head">Membros — 2</div>
+            <div class="mem">
+              <span class="avatar avatar-xs" style="--av:#A78BFA">R</span>
+              <span>Renan</span>
+            </div>
+            <div class="mem">
+              <span class="avatar avatar-xs avatar-bot" style="--av:#0FB9A8">E</span>
+              <span>Echo BOT</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Recursos Principais -->
     <section class="section" id="recursos">
       <div class="container">
-        <h2>Feito para comunidades</h2>
-        <p class="section-lead">Tudo o que uma comunidade ativa precisa — e nada do que ela não pediu.</p>
+        <h2>Feito para comunidades reais</h2>
+        <p class="section-lead">
+          Do chat de texto estruturado até transmissões ao vivo em alta taxa de quadros, o Echo oferece todas as ferramentas para reunir amigos e comunidades.
+        </p>
         <div class="feature-grid">
+          <!-- Card 1: Voz VAD -->
           <article class="card">
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 8h20M6 16h20M6 24h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-            <h3>Comunidades e canais</h3>
-            <p>Organize suas guildas com categorias e canais de texto — a estrutura que suas pessoas já conhecem.</p>
+            <div class="card-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+            </div>
+            <h3>Salas de Voz Ultra-rápidas <span class="badge-active">ATIVO</span></h3>
+            <p>
+              Detecção de voz adaptativa (VAD estilo Discord) com supressão de ruído profissional, indicação de anel verde nos avatares e baixíssima latência.
+            </p>
           </article>
+
+          <!-- Card 2: Screen Sharing -->
           <article class="card">
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 8h13a5 5 0 0 1 5 5v6a5 5 0 0 1-5 5h-3l-6 5v-5H7a5 5 0 0 1-5-5v-6a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/><path d="M26 14h2a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4h-2" stroke="currentColor" stroke-width="2.4" fill="none"/></svg>
-            <h3>Threads e reações</h3>
-            <p>Converse em paralelo sem poluir o canal. Reações rápidas para concordar, comemorar e reagir.</p>
+            <div class="card-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polygon points="10 8 16 11 10 14" fill="currentColor"/></svg>
+            </div>
+            <h3>Transmissão de Tela a 60 FPS <span class="badge-active">ATIVO</span></h3>
+            <p>
+              Compartilhamento de janelas ou tela inteira com captura integrada do áudio do sistema. Transmita jogos, reuniões e código sem perda de fluidez.
+            </p>
           </article>
+
+          <!-- Card 3: Ergonomia e Dark Glassmorphism -->
           <article class="card">
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="2.4" fill="none"/><circle cx="27" cy="6" r="4" fill="currentColor"/></svg>
-            <h3>Presença em tempo real</h3>
-            <p>Veja quem está online, quem está ausente e quem está digitando — sem achismo.</p>
+            <div class="card-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+            </div>
+            <h3>Ergonomia Discord & Glassmorphism</h3>
+            <p>
+              Layout refinado de 4 colunas (Rail, Sidebar com dock de áudio persistente, Chat e MemberList) com estética Dark Glassmorphism e acento Teal Glow.
+            </p>
           </article>
+
+          <!-- Card 4: Perfis e Banners -->
           <article class="card">
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="3" stroke="currentColor" stroke-width="2.4" fill="none"/><circle cx="11" cy="14" r="2.6" fill="currentColor"/><path d="m6 23 7-6 5 4 4-3 4 4" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
-            <h3>Mídia com preview</h3>
-            <p>Imagens e vídeos aparecem direto na conversa, com thumbnail e visualização sem sair do canal.</p>
+            <div class="card-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Perfis, Banners & Cargos</h3>
+            <p>
+              Banners panorâmicos 16:9, avatares em alta resolução com iniciais dinâmicas, status de presença customizável e apelidos personalizados por guilda.
+            </p>
           </article>
+
+          <!-- Card 5: Privacidade e Matrix -->
           <article class="card">
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a12 12 0 0 1 12 12v5a5 5 0 0 1-5 5h-2v-8h7M4 16v-2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M4 16a12 12 0 0 0 4 9v3h3v-4H8" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h3>Login com Google</h3>
-            <p>Entre com a conta que você já usa. Escolha seu nome de usuário uma vez — e pronto.</p>
+            <div class="card-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Soberania & Protocolo Matrix</h3>
+            <p>
+              Seus dados pertencem à sua comunidade. Roda sobre a rede descentralizada Matrix, self-hosted em sua infraestrutura, sem anúncios nem rastreadores.
+            </p>
           </article>
+
+          <!-- Card 6: Login Google e Convites -->
           <article class="card">
-            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="8" cy="16" r="2.5" fill="currentColor"/><path d="M13 10a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".6"/><path d="M18 6a13 13 0 0 1 0 20" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".3"/><path d="M24 4v24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 5"/></svg>
-            <h3>Voz e vídeo <span class="soon">em breve</span></h3>
-            <p>Salas de voz nativas direto no app — converse sem sair da comunidade. Está no roadmap.</p>
+            <div class="card-icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            </div>
+            <h3>Login com Google & Convites Rápidos</h3>
+            <p>
+              Entrada em 1 clique com sua conta Google, sem senhas complicadas. Gere links de convite instantâneos com pré-visualização da comunidade.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Prévia da Interface -->
     <section class="section section-alt" id="previa">
       <div class="container">
-        <h2>Parece com o que você conhece</h2>
-        <p class="section-lead">Interface escura, densa em informação e rápida — prévia da interface em construção.</p>
+        <h2>Experiência imersiva e familiar</h2>
+        <p class="section-lead">Uma interface construída para velocidade, ergonomia e acolhimento contínuo.</p>
         <div class="shot-grid">
+          <!-- Shot 1 -->
           <figure class="shot">
             <div class="shot-body" aria-hidden="true">
-              <div class="chat-head"># geral</div>
+              <div class="chat-head">
+                <span style="color:var(--mut-dark)">#</span>
+                <span>geral — transmissões e mídia</span>
+              </div>
               <div class="msg">
-                <span class="avatar" style="--av:#F472B6">M</span>
+                <span class="avatar" style="--av:#EC4899">M</span>
                 <div class="msg-body">
-                  <p class="msg-who">Marina <time>15:41</time></p>
-                  <p class="msg-text">Olha o preview de mídia — dá pra ver direto no canal, sem abrir nada.</p>
-                  <div class="media-thumb"></div>
-                  <div class="reaction-row"><span class="reaction">🔥 5</span><span class="reaction">👀 3</span></div>
+                  <p class="msg-who">Marina <time>20:15</time></p>
+                  <p class="msg-text">Transmissão aberta com áudio e 60 FPS — confiram no preview abaixo:</p>
+                  <div class="stream-banner">
+                    <div class="stream-banner-top">
+                      <span class="badge-live">AO VIVO</span>
+                      <span class="stream-banner-res">1080p · 60 FPS</span>
+                    </div>
+                    <div class="stream-banner-bottom">
+                      <span>Transmissão de Tela · IDE & Navegador</span>
+                    </div>
+                  </div>
+                  <div class="reaction-row">
+                    <span class="reaction">🔥 9</span>
+                    <span class="reaction">⚡ 4</span>
+                  </div>
                 </div>
               </div>
               <div class="msg">
-                <span class="avatar avatar-bot" style="--av:#14B8A6">E</span>
+                <span class="avatar avatar-bot" style="--av:#0FB9A8">E</span>
                 <div class="msg-body">
-                  <p class="msg-who"><span class="tag-bot">BOT</span> Echo <time>15:42</time></p>
-                  <p class="msg-text">Resumi a thread "roadmap de voz" com 3 conclusões.</p>
-                  <span class="thread-chip">🧵 thread · 3 respostas</span>
+                  <p class="msg-who"><span class="tag-bot">BOT</span> Echo <time>20:16</time></p>
+                  <p class="msg-text">Thread arquivada: "Melhorias de VAD e Áudio do Sistema".</p>
+                  <span class="thread-chip">🧵 thread · 5 respostas</span>
                 </div>
               </div>
             </div>
-            <figcaption>Conversas com reações, threads e bots</figcaption>
+            <figcaption>Conversas dinâmicas com transmissão ao vivo, reações e threads</figcaption>
           </figure>
+
+          <!-- Shot 2 -->
           <figure class="shot">
             <div class="shot-body shot-body-side" aria-hidden="true">
-              <div class="side-head">Echo HQ</div>
-              <div class="side-cat">Geral</div>
-              <div class="side-chan"># bem-vindos</div>
-              <div class="side-chan active"># geral</div>
-              <div class="side-chan"># dev-log</div>
-              <div class="side-cat">Voz</div>
-              <div class="side-chan side-voice">
-                <span class="voice-wave"><svg viewBox="0 0 16 16"><path d="M3 6v4M6 4v8M9 5v6M12 3v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-                Lounge
+              <div class="side-head">Echo HQ · Salas de Voz</div>
+              <div class="side-cat">Conectado Agora</div>
+              <div class="side-chan side-voice active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                <span>Lounge Principal</span>
               </div>
-              <div class="voice-avatars">
-                <span class="avatar avatar-xs" style="--av:#2DD4BF">L</span>
-                <span class="avatar avatar-xs" style="--av:#F472B6">M</span>
-                <span class="avatar avatar-xs" style="--av:#A78BFA">R</span>
-                <span class="voice-more">+1</span>
+
+              <div class="voice-participant-box">
+                <div class="voice-part-row">
+                  <div class="voice-part-left">
+                    <span class="avatar avatar-xs avatar-speaking" style="--av:#0FB9A8">L</span>
+                    <span class="voice-part-name">Lucas</span>
+                  </div>
+                  <div class="voice-part-badges">
+                    <div class="voice-bars"><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+                <div class="voice-part-row">
+                  <div class="voice-part-left">
+                    <span class="avatar avatar-xs" style="--av:#EC4899">M</span>
+                    <span class="voice-part-name">Marina</span>
+                  </div>
+                  <div class="voice-part-badges">
+                    <span class="badge-live">AO VIVO</span>
+                  </div>
+                </div>
+                <div class="voice-part-row">
+                  <div class="voice-part-left">
+                    <span class="avatar avatar-xs" style="--av:#A78BFA">R</span>
+                    <span class="voice-part-name">Renan</span>
+                  </div>
+                </div>
               </div>
+
+              <div class="side-cat" style="margin-top:18px;">Comunidade Online</div>
               <div class="shot-presence">
-                <span class="pres pres-online">Lucas</span>
-                <span class="pres pres-online">Marina</span>
-                <span class="pres pres-idle">Renan</span>
-                <span class="pres pres-off">Bia</span>
+                <span class="pres pres-online">Lucas (Falando no Lounge)</span>
+                <span class="pres pres-online">Marina (Transmitindo)</span>
+                <span class="pres pres-idle">Renan (Ausente)</span>
+                <span class="pres pres-off">Bia (Offline)</span>
               </div>
             </div>
-            <figcaption>Canais, presença e salas de voz</figcaption>
+            <figcaption>Salas de voz ativas com indicação de fala e transmissão ao vivo</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
+    <!-- Privacidade -->
     <section class="section privacy">
       <div class="container privacy-inner">
         <svg class="privacy-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 5 8v7c0 7 4.7 12 11 14 6.3-2 11-7 11-14V8L16 3Z" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/><path d="m11 16 4 4 6-7" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div>
           <h2>Self-hosted por princípio</h2>
-          <p>Seu servidor, seu banco de dados, suas regras. Sem anúncios, sem rastreadores, sem venda de dados — o Echo roda na sua infraestrutura, e a conversa da sua comunidade fica com a sua comunidade.</p>
+          <p>
+            Seu servidor, seu banco de dados, suas regras. Sem anúncios invasivos, sem algoritmos de engajamento forçado e sem rastreadores. O Echo roda na sua infraestrutura descentralizada — a comunicação da sua comunidade pertence unicamente a vocês.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Download -->
     <section class="section section-alt" id="download">
-      <div class="container download-inner">
+      <div class="container">
         <h2>Baixar o Echo</h2>
-        <p class="section-lead">Windows primeiro. macOS e Linux no roadmap.</p>
+        <p class="section-lead">Instalação rápida no Windows com atualização contínua e silenciosa.</p>
         <div class="dl-cards">
+          <!-- Card Download Windows -->
           <article class="dl-card">
             <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 6l12-2v14H4V6Zm14-2.3L28 2v16H18V3.7ZM4 20h12v8l-12-2v-6Zm14 0h10v10l-10-2V20Z" fill="currentColor" opacity=".92"/></svg>
-            <h3>Windows</h3>
-            <p>Instalador padrão, com atualização automática silenciosa: o Echo se atualiza sozinho e aplica na próxima reinicializada do app.</p>
-            <a class="btn btn-primary" id="dl-windows" href="https://github.com/CilentoX/Echo/releases/latest" download>Baixar para Windows</a>
-            <p class="dl-note">Última versão direto do GitHub Releases, sem cadastro. Código-fonte no <a href="https://github.com/CilentoX/Echo" rel="noopener">GitHub</a>.</p>
+            <h3>Echo para Windows (x64)</h3>
+            <p>
+              Instalador oficial assinado digitalmente com suporte nativo a salas de voz, captura de tela a 60 FPS e inicialização instantânea.
+            </p>
+            <a class="btn btn-primary" id="dl-windows" href="https://github.com/CilentoX/Echo/releases/download/v0.1.14/Echo_0.1.14_x64-setup.exe" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Baixar v0.1.14 (.exe)
+            </a>
+            <p class="dl-note">Última versão lançada diretamente no GitHub Releases. Código-fonte aberto no <a href="https://github.com/CilentoX/Echo" target="_blank" rel="noopener">GitHub</a>.</p>
           </article>
+
+          <!-- Card Auto-updater -->
           <article class="dl-card">
             <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2.4" fill="none"/><path d="M16 9v7l5 3" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
-            <h3>Atualizações automáticas</h3>
-            <p>Nada de procurar link de download toda vez: instalou uma vez, o Echo mantém-se atualizado sozinho.</p>
+            <h3>Atualizações Automáticas</h3>
+            <p>
+              Nunca mais baixe arquivos manualmente: o updater integrado verifica novas versões em segundo plano e aplica correções na próxima inicialização sem atrapalhar suas chamadas.
+            </p>
+            <p class="dl-note">Verificação via manifesto criptográfico assinado com chaves Minisign.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container faq-inner">
         <h2>Perguntas frequentes</h2>
         <details open>
           <summary>O Echo é gratuito?</summary>
-          <p>Sim. O app é gratuito e o servidor roda na infraestrutura que você escolher — sem mensalidade, sem plano Pro.</p>
+          <p>
+            Sim. O aplicativo desktop é 100% gratuito e o backend roda no seu próprio servidor ou VPS, sem assinaturas, sem taxas ocultas e sem limites arbitrários de usuários.
+          </p>
         </details>
         <details>
-          <summary>Preciso de servidor próprio?</summary>
-          <p>Para <strong>criar</strong> uma comunidade, sim — o Echo é self-hosted: uma VPS com Docker é suficiente. Para <strong>entrar</strong> numa comunidade, basta receber um convite e entrar com sua conta Google.</p>
+          <summary>O Echo já possui salas de voz e transmissão de tela?</summary>
+          <p>
+            Sim! A versão atual conta com salas de voz integradas de baixíssima latência, detecção de voz adaptativa (VAD estilo Discord), cancelamento profissional de eco/ruído e compartilhamento de tela nativo a 60 FPS com captura de áudio do sistema.
+          </p>
         </details>
         <details>
-          <summary>Como convido pessoas para minha comunidade?</summary>
-          <p>Por convites gerados pelo próprio Echo. Quem entra escolhe o nome de usuário uma única vez — o resto é história.</p>
+          <summary>Como funciona o compartilhamento de tela com áudio?</summary>
+          <p>
+            O app captura nativamente a tela inteira ou janelas de aplicativos no Windows e envia os canais de áudio com alta fidelidade diretamente para a sala de voz, permitindo que amigos assistam jogos e vídeos com sincronização perfeita.
+          </p>
         </details>
         <details>
-          <summary>Tem aplicativo para celular?</summary>
-          <p>Ainda não. O foco atual é o desktop para Windows; macOS e Linux são os próximos da fila.</p>
+          <summary>Preciso de um servidor próprio para usar?</summary>
+          <p>
+            Para <strong>criar e hospedar</strong> sua comunidade, sim — basta uma VPS modesta com Docker para subir a stack Matrix/Synapse. Para <strong>participar</strong>, você só precisa baixar o app desktop e clicar no link de convite da guilda.
+          </p>
         </details>
         <details>
-          <summary>Tem chamadas de voz?</summary>
-          <p>Está no roadmap — salas de voz nativas no app. A primeira versão foca no essencial de texto: canais, threads, reações e presença.</p>
+          <summary>Como funciona o login com o Google?</summary>
+          <p>
+            O Echo utiliza autenticação SSO segura via Google. Ao clicar em entrar, uma janela do seu navegador abre a página do Google e retorna uma sessão autorizada para o app desktop em poucos segundos.
+          </p>
         </details>
         <details>
-          <summary>Onde ficam os meus dados?</summary>
-          <p>No seu servidor. Mensagens e mídia ficam na sua infraestrutura — a única dependência externa é o login com Google.</p>
+          <summary>Como funcionam as atualizações do aplicativo?</summary>
+          <p>
+            O app possui um atualizador embutido que verifica o manifesto <code>latest.json</code> assinado no nosso servidor. Quando uma nova versão é detectada, o download ocorre em segundo plano com validação de assinatura criptográfica.
+          </p>
         </details>
       </div>
     </section>
@@ -270,21 +471,22 @@
         <img class="logo" src="logo-512.png" alt="" aria-hidden="true">
         <div>
           <p class="footer-name">Echo</p>
-          <p class="footer-tag">Mensageria para comunidades — self-hosted.</p>
+          <p class="footer-tag">Mensageria e salas de voz para comunidades — self-hosted.</p>
         </div>
       </div>
       <nav class="footer-links" aria-label="Links do rodapé">
         <a href="#recursos">Recursos</a>
+        <a href="#previa">Prévia</a>
         <a href="#download">Download</a>
         <a href="#faq">FAQ</a>
-        <a href="https://github.com/CilentoX/Echo-site" rel="noopener">GitHub</a>
+        <a href="https://github.com/CilentoX/Echo" target="_blank" rel="noopener">GitHub</a>
       </nav>
       <p class="footer-copy">© 2026 Litteris · echoapp.litteris.online</p>
     </div>
   </footer>
 
   <script>
-    // Resolve o instalador da última release automaticamente via GitHub API
+    // Atualiza o link do botão de download dinamicamente caso haja release mais recente no GitHub
     (function(){
       var btn = document.getElementById('dl-windows');
       if (!btn) return;
@@ -298,7 +500,7 @@
           }
         })
         .catch(function(){
-          // fallback: mantém o link para a página de releases
+          // Mantém o link direto para v0.1.14 já configurado
         });
     })();
   </script>
