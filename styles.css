@@ -1,3 +1,40 @@
+/* Self-hosted fonts (Space Grotesk + Inter via @fontsource) */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Inter-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Inter-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Inter-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Inter-Bold.woff2") format("woff2");
+}
+
 /* Echo — landing page. Identidade: paleta Echo proprietária, Dark Glassmorphism, Space Grotesk + Inter. */
 :root {
   --bg: #0b0e14;
@@ -635,4 +672,15 @@ details p { color: var(--mut); margin-top: 14px; font-size: 0.95rem; line-height
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
+}
+
+.hero-social-proof {
+  margin-top: 18px;
+  font-size: 0.92rem;
+  color: var(--mut);
+  line-height: 1.5;
+}
+.hero-social-proof strong {
+  color: var(--acc);
+  font-weight: 600;
 }

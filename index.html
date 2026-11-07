@@ -8,12 +8,35 @@
   <meta property="og:description" content="Guildas, canais, salas de voz com VAD Discord-grade e transmissão a 60 FPS — no seu servidor, com login Google.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://echoapp.litteris.online">
-  <title>Echo — O app de comunidades com voz, vídeo e soberania</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta property="og:image" content="https://echoapp.litteris.online/logo-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://echoapp.litteris.online/logo-512.png">
+  <link rel="canonical" href="https://echoapp.litteris.online">
+  <meta name="theme-color" content="#0b0e14">
+  <title>Echo — O app de comunidades com voz, vídeo e soberania</title>  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon-32.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Echo",
+  "applicationCategory": "CommunicationApplication",
+  "operatingSystem": "Windows",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "description": "Mensageria moderna e salas de voz para comunidades com VAD adaptativo, transmissão a 60 FPS e protocolo Matrix descentralizado.",
+  "downloadUrl": "https://echoapp.litteris.online/#download",
+  "softwareVersion": "0.1.16",
+  "datePublished": "2026-11-06",
+  "author": {
+    "@type": "Organization",
+    "name": "Litteris"
+  }
+}
+</script>
 </head>
 <body>
   <header class="nav">
@@ -55,10 +78,12 @@
             <li>Salas de Voz & 60 FPS</li>
             <li>Sem Anúncios</li>
           </ul>
+          <p class="hero-social-proof">Junte-se a <strong>+50 comunidades</strong> que já migraram para o Echo.</p>
         </div>
 
         <!-- Interactive Hero Mockup -->
-        <div class="hero-mock" role="img" aria-label="Prévia da interface do Echo com 4 colunas: rail, canais com voz e dock de usuário, chat ao vivo e lista de membros">
+        <div class="hero-mock" role="img" aria-label="Prévia da interface do Echo" aria-describedby="mockup-desc">
+          <span id="mockup-desc" hidden>Interface de 4 colunas: rail lateral com guildas, sidebar com canais de texto e voz incluindo dock persistente de áudio, painel central de chat com mensagens e reações, e lista de membros online à direita.</span>
           <!-- Coluna 1: Rail -->
           <div class="mock-rail" aria-hidden="true">
             <div class="rail-btn" title="Início">
@@ -486,7 +511,7 @@
   </footer>
 
   <script>
-    // Atualiza o link do botão de download dinamicamente caso haja release mais recente no GitHub
+    // Atualiza o link do botão de download dinamicamente
     (function(){
       var btn = document.getElementById('dl-windows');
       if (!btn) return;
@@ -499,9 +524,20 @@
             btn.download = asset.name;
           }
         })
-        .catch(function(){
-          // Mantém o link direto para v0.1.15 já configurado
+        .catch(function(){});
+    })();
+
+    // Pausa animações CSS quando elementos saem do viewport
+    (function(){
+      if (!('IntersectionObserver' in window)) return;
+      var targets = document.querySelectorAll('.voice-bars, .avatar-speaking, .badge-live');
+      if (!targets.length) return;
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          entry.target.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
         });
+      }, { threshold: 0.1 });
+      targets.forEach(function(el){ observer.observe(el); });
     })();
   </script>
 </body>
